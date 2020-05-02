@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yakup Ates</title>
+    <link>https://y-ates.github.io/</link>
+    <description>Recent content on Yakup Ates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://y-ates.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Development for embedded devices</title>
+      <link>https://y-ates.github.io/posts/embedded/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/posts/embedded/</guid>
+      <description>Developing an automatic plant irrigation system I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.
+Actually, it was pretty fun. But there were some problems for which I still don&amp;rsquo;t have a solution for. E.g. Arduino IDE not pushing the code with the following error message:
+avrdude: stk500_recv(): programmer is not responding.</description>
+    </item>
+    
+    <item>
+      <title>Researching IT-Security!</title>
+      <link>https://y-ates.github.io/posts/research/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/posts/research/</guid>
+      <description>:EXPORT_FILE_NAME: auto-set-lastmod
+DOM-Clobbering </description>
+    </item>
+    
+    <item>
+      <title>Solving challenges using Capture-The-Flags!</title>
+      <link>https://y-ates.github.io/posts/ctf/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/posts/ctf/</guid>
+      <description>CTF Challenge 1 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://y-ates.github.io/ctf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://y-ates.github.io/ctf/</guid>
+      <description> Solving challenges using Capture-The-Flags!  CTF Challenge 1  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 Raspberry DUMMY    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://y-ates.github.io/embedded/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://y-ates.github.io/embedded/</guid>
+      <description>Development for embedded devices  Developing an automatic plant irrigation system   I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.  Actually, it was pretty fun. But there were some problems for which I still don&amp;#39;t have a solution for. E.g. Arduino IDE not pushing the code with the following error message: avrdude: stk500_recv(): programmer is not responding.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://y-ates.github.io/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://y-ates.github.io/research/</guid>
+      <description> Researching IT-Security!  DOM-Clobbering  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 DOM DUMMY    </description>
+    </item>
+    
+  </channel>
+</rss>
