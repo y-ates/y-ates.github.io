@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Yakup Ates</title>
+    <link>https://y-ates.github.io/tags/</link>
+    <description>Recent content in Tags on Yakup Ates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://y-ates.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>arduino</title>
+      <link>https://y-ates.github.io/tags/arduino/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cve</title>
+      <link>https://y-ates.github.io/tags/cve/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://y-ates.github.io/tags/hugo/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it</title>
+      <link>https://y-ates.github.io/tags/it/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it-security</title>
+      <link>https://y-ates.github.io/tags/it-security/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/it-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org</title>
+      <link>https://y-ates.github.io/tags/org/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/org/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>https://y-ates.github.io/tags/research/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vulnerabilities</title>
+      <link>https://y-ates.github.io/tags/vulnerabilities/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/vulnerabilities/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
