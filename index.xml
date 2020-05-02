@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>BeepBoop - I am a program!</title>
+      <link>https://y-ates.github.io/posts/desktop/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/posts/desktop/</guid>
+      <description>torproxy I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;ldquo;dockerized&amp;rdquo; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+    </item>
+    
+    <item>
       <title>Development for embedded devices</title>
       <link>https://y-ates.github.io/posts/embedded/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
@@ -52,6 +61,15 @@ DOM-Clobbering </description>
     
     <item>
       <title></title>
+      <link>https://y-ates.github.io/desktop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://y-ates.github.io/desktop/</guid>
+      <description>BeepBoop - I am a program!  torproxy   I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;#34;dockerized&amp;#34; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://y-ates.github.io/embedded/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -65,7 +83,7 @@ DOM-Clobbering </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://y-ates.github.io/research/</guid>
-      <description> Researching IT-Security!  DOM-Clobbering  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 DOM DUMMY    </description>
+      <description> Researching IT-Security!  DOM-Clobbering  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 DOM-Clobbering DUMMY    </description>
     </item>
     
   </channel>

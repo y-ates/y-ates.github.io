@@ -21,11 +21,47 @@
     </item>
     
     <item>
+      <title>BASH</title>
+      <link>https://y-ates.github.io/tags/bash/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://y-ates.github.io/tags/c/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://y-ates.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cve</title>
       <link>https://y-ates.github.io/tags/cve/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://y-ates.github.io/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://y-ates.github.io/tags/development/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/development/</guid>
       <description></description>
     </item>
     
@@ -57,6 +93,15 @@
     </item>
     
     <item>
+      <title>Java</title>
+      <link>https://y-ates.github.io/tags/java/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>org</title>
       <link>https://y-ates.github.io/tags/org/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
@@ -66,11 +111,29 @@
     </item>
     
     <item>
+      <title>PHP</title>
+      <link>https://y-ates.github.io/tags/php/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>research</title>
       <link>https://y-ates.github.io/tags/research/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://y-ates.github.io/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://y-ates.github.io/tags/software/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/tags/software/</guid>
       <description></description>
     </item>
     
