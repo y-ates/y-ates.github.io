@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Yakup Ates</title>
+    <link>https://y-ates.github.io/tags/software/</link>
+    <description>Recent content in software on Yakup Ates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://y-ates.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BeepBoop - I am a program!</title>
+      <link>https://y-ates.github.io/posts/desktop/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/posts/desktop/</guid>
+      <description>torproxy I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;ldquo;dockerized&amp;rdquo; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+    </item>
+    
+  </channel>
+</rss>
