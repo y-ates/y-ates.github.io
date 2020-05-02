@@ -65,7 +65,7 @@ DOM-Clobbering </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://y-ates.github.io/research/</guid>
-      <description> Researching IT-Security!  DOM-Clobbering  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 DOM DUMMY    </description>
+      <description> Researching IT-Security!  DOM-Clobbering  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 DOM-Clobbering DUMMY    </description>
     </item>
     
   </channel>
