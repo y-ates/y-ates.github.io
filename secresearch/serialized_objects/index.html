@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Serialized Objects &middot; Yakup Ates </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+
+
+
+
+<script src="/js/jquery.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://y-ates.github.io/css/nix.css">
+
+
+
+
+
+<link href="/css/Inconsolata_Open_Sans_Concert_One.css" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='https://y-ates.github.io/'>
+        Yakup Ates@/dev/null ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='https://y-ates.github.io/'>/home/Yakup Ates</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">development <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                    		<li>
+                    		<a href="https://y-ates.github.io/embedded">~/embedded</a>
+				    		</li>
+                		
+                    		<li>
+                    		<a href="https://y-ates.github.io/generaldev">~/generaldev</a>
+				    		</li>
+                		
+            		</ul>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">security <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                    		<li>
+                    		<a href="https://y-ates.github.io/ctf">~/ctf</a>
+				    		</li>
+                		
+                    		<li>
+                    		<a href="https://y-ates.github.io/secresearch">~/research</a>
+				    		</li>
+                		
+            		</ul>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://y-ates.github.io/secresearch/serialized_objects/">Serialized Objects</a></h1>
+            <span class="post-date">2020-04-20</span>
+            <div class="post-content">
+                <p>Object serialization is an important aspect of any non-trivial program. When
+running around <a href="https://www.youtube.com/watch?v=EbI0cMyyw%5FM">through the jungle</a> one easily encounters these types of
+files.</p>
+<p>As serialized files will get deserialized at some but by the application an
+interesting vulnerability comes into mind <strong><a href="https://owasp.org/www-community/vulnerabilities/Deserialization%5Fof%5Funtrusted%5Fdata">Insecure Object Deserialization</a></strong>.
+An Insecure Object Deserialization occurs when an application attempts to
+deserialize untrusted data.
+Without experience it can get pretty tricky to detect serialized files and thus
+one might overlook this type of vulnerability.</p>
+<p>In the following I will demonstrate characteristics of serialized objects in
+Java, PHP and Python.</p>
+<h2 id="java">Java</h2>
+<p>Detecting serialized objects by Java is fairly easy. The serialized output
+will always start with a constant hex value: <code>aced00057372</code>.
+The table below should serve us as an explanation of these bytes:</p>
+<style>
+  .my-table th,
+  .my-table td {
+  padding: 20px;
+  text-align: left;
+  }
+
+  .underline span {
+  text-decoration: underline;
+  }
+</style>
+<div class="ox-hugo-table my-table">
+<div></div>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Hex value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STREAM_MAGIC</td>
+<td>aced</td>
+</tr>
+<tr>
+<td>STREAM_VERSION</td>
+<td>00005</td>
+</tr>
+<tr>
+<td>TC_OBJECT</td>
+<td>73</td>
+</tr>
+<tr>
+<td>TC_CLASSDESC</td>
+<td>72</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>So, whenever you see these hex values in a serialized file you know its
+serialization is made using Java!</p>
+<h2 id="php">PHP</h2>
+<p>Serialized objects by PHP are kind of unique, too. But you can&rsquo;t just check
+for a fixed hex value to detect it. The cool part is, you can understand the
+internal logic of a serialized object by PHP without deserializing
+it. Nevertheless, I would recommend deserializing it when attempting to dig
+deeper just to avoid some headaches.</p>
+<p>Lets just jump into some examples and examine these closely:</p>
+<div class="ox-hugo-table my-table">
+<div></div>
+<table>
+<thead>
+<tr>
+<th>Plaintext</th>
+<th>Serialized</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NULL</td>
+<td>N;</td>
+</tr>
+<tr>
+<td>myVar = true</td>
+<td>myVar:1;</td>
+</tr>
+<tr>
+<td>myVar = false</td>
+<td>myVar:0;</td>
+</tr>
+<tr>
+<td>i = 1337</td>
+<td>i:1337;</td>
+</tr>
+<tr>
+<td>j = 1.337</td>
+<td>j:1.337;</td>
+</tr>
+<tr>
+<td>myString = &ldquo;test&rdquo;</td>
+<td>s:4:&ldquo;test&rdquo;;</td>
+</tr>
+<tr>
+<td>myArray = array(1, 2, 3)</td>
+<td>myArray:3:{i:1;i:2;i:3;};</td>
+</tr>
+<tr>
+<td>myArray = array(&ldquo;ref&rdquo; =&gt; 0)</td>
+<td>myarray:1:{s:3:&ldquo;ref&rdquo;;i:0};</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+  span.underline {
+  text-decoration: underline;
+  }
+</style>
+<p>We can see that each instruction gets transformed into some kind of
+shortform. We can still see the names of variables and their values.
+A <span class="underline">NULL byte</span> gets transformed into &ldquo;N;&rdquo; and <span class="underline">boolean values</span> in their
+respective values of 0 or 1.
+<span class="underline">Integers and floats</span> will be transformed into <code>&lt;variable name&gt;:&lt;variable value&gt;;</code>.
+<span class="underline">Strings</span> on the other hand will also include their respective length, thus:
+<code>&lt;variable name&gt;:&lt;length of string&gt;:&lt;variable value&gt;;</code>.
+<span class="underline">Arrays</span> kind of synergize the format of strings and integers and also
+introduce curly brackets:
+<code>&lt;variable name&gt;::&lt;length of array&gt;:{&lt;serialized variables&gt;;}</code>.
+<span class="underline">Arrays with keys</span> get a little bit more complicated as the content of the
+curly brackets also include the references, but all in all the concept
+overlaps</p>
+<p>If you take this table as a few vocabularies or just remember this type
+format, you will be easily recognize PHP serialized objects!</p>
+<h2 id="python">Python</h2>
+<p>&ndash; TODO</p>
+
+            </div>
+            
+            <div class="post-comments">
+                
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2020 Yakup Ates -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>

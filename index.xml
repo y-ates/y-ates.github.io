@@ -21,21 +21,22 @@
     </item>
     
     <item>
-      <title>DOM-Clobbering</title>
-      <link>https://y-ates.github.io/secresearch/domclobbering/</link>
-      <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>torproxy</title>
       <link>https://y-ates.github.io/generaldev/torproxy/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://y-ates.github.io/generaldev/torproxy/</guid>
       <description>I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;ldquo;dockerized&amp;rdquo; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+    </item>
+    
+    <item>
+      <title>Serialized Objects</title>
+      <link>https://y-ates.github.io/secresearch/serialized_objects/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/serialized_objects/</guid>
+      <description>Object serialization is an important aspect of any non-trivial program. When running around through the jungle one easily encounters these types of files.
+As serialized files will get deserialized at some but by the application an interesting vulnerability comes into mind Insecure Object Deserialization. An Insecure Object Deserialization occurs when an application attempts to deserialize untrusted data. Without experience it can get pretty tricky to detect serialized files and thus one might overlook this type of vulnerability.</description>
     </item>
     
     <item>
@@ -47,6 +48,15 @@
       <description>I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.
 Actually, it was pretty fun. But there were some problems for which I still don&amp;rsquo;t have a solution for. E.g. Arduino IDE not pushing the code with the following error message:
 avrdude: stk500_recv(): programmer is not responding. There were some posts on the Internet like StackOverflow, but those weren&amp;rsquo;t the solutions.</description>
+    </item>
+    
+    <item>
+      <title>DOM-Clobbering</title>
+      <link>https://y-ates.github.io/secresearch/domclobbering/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -82,7 +92,7 @@ avrdude: stk500_recv(): programmer is not responding. There were some posts on t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://y-ates.github.io/secresearch/</guid>
-      <description> Researching IT-Security!  DOM-Clobbering  </description>
+      <description>Researching IT-Security!  Serialized Objects   Object serialization is an important aspect of any non-trivial program. When running around through the jungle one easily encounters these types of files.  As serialized files will get deserialized at some but by the application an interesting vulnerability comes into mind Insecure Object Deserialization. An Insecure Object Deserialization occurs when an application attempts to deserialize untrusted data. Without experience it can get pretty tricky to detect serialized files and thus one might overlook this type of vulnerability.</description>
     </item>
     
   </channel>
