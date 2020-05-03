@@ -6,19 +6,18 @@
     <description>Recent content in it on Yakup Ates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://y-ates.github.io/tags/it/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Researching IT-Security!</title>
-      <link>https://y-ates.github.io/posts/research/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      <title>DOM-Clobbering</title>
+      <link>https://y-ates.github.io/secresearch/domclobbering/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
       
-      <guid>https://y-ates.github.io/posts/research/</guid>
-      <description>:EXPORT_FILE_NAME: auto-set-lastmod
-DOM-Clobbering </description>
+      <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
+      <description></description>
     </item>
     
   </channel>

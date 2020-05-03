@@ -3,143 +3,133 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://y-ates.github.io/posts/desktop/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <loc>https://y-ates.github.io/ctf/ctf1/</loc>
+    <lastmod>2020-05-03T13:45:31+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/posts/embedded/</loc>
-    <lastmod>2020-05-02T20:43:12+02:00</lastmod>
+    <loc>https://y-ates.github.io/secresearch/domclobbering/</loc>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/posts/research/</loc>
-    <lastmod>2020-05-02T21:04:47+02:00</lastmod>
+    <loc>https://y-ates.github.io/generaldev/torproxy/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/posts/ctf/</loc>
-    <lastmod>2020-05-02T20:06:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/arduino/</loc>
-    <lastmod>2020-05-02T20:43:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/bash/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <loc>https://y-ates.github.io/embedded/arduino-plantlife/</loc>
+    <lastmod>2020-05-03T13:42:50+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/c/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/c&#43;&#43;/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/categories/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/ctf/</loc>
+    <lastmod>2020-05-03T13:45:31+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/cve/</loc>
-    <lastmod>2020-05-02T21:04:47+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/development/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/categories/development/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/categories/dom/</loc>
-    <lastmod>2020-05-02T21:04:47+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/categories/emacs/</loc>
-    <lastmod>2020-05-02T20:06:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/categories/embedded/</loc>
-    <lastmod>2020-05-02T20:43:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/hugo/</loc>
-    <lastmod>2020-05-02T20:06:12+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/it/</loc>
-    <lastmod>2020-05-02T21:04:47+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/it-security/</loc>
-    <lastmod>2020-05-02T21:04:47+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/java/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/org/</loc>
-    <lastmod>2020-05-02T20:06:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/tags/php/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/posts/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/research/</loc>
-    <lastmod>2020-05-02T21:04:47+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/tags/software/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://y-ates.github.io/categories/software/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <loc>https://y-ates.github.io/secresearch/</loc>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/vulnerabilities/</loc>
-    <lastmod>2020-05-02T21:04:47+02:00</lastmod>
+    <lastmod>2020-05-03T13:43:06+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/</loc>
-    <lastmod>2020-05-02T21:45:19+02:00</lastmod>
+    <lastmod>2020-05-03T13:45:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/tags/bash/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/tags/development/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/categories/development/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/generaldev/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/tags/java/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/tags/php/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/tags/software/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/categories/software/</loc>
+    <lastmod>2020-05-03T13:42:33+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/embedded/</loc>
+    <lastmod>2020-05-03T13:42:50+02:00</lastmod>
   </url>
   
   <url>
@@ -147,15 +137,15 @@
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/desktop/</loc>
-  </url>
-  
-  <url>
     <loc>https://y-ates.github.io/embedded/</loc>
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/research/</loc>
+    <loc>https://y-ates.github.io/generaldev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/secresearch/</loc>
   </url>
   
 </urlset>

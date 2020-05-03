@@ -6,48 +6,47 @@
     <description>Recent content on Yakup Ates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://y-ates.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>BeepBoop - I am a program!</title>
-      <link>https://y-ates.github.io/posts/desktop/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
+      <title>CTF Challenge one!</title>
+      <link>https://y-ates.github.io/ctf/ctf1/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
       
-      <guid>https://y-ates.github.io/posts/desktop/</guid>
-      <description>torproxy I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;ldquo;dockerized&amp;rdquo; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+      <guid>https://y-ates.github.io/ctf/ctf1/</guid>
+      <description>test</description>
     </item>
     
     <item>
-      <title>Development for embedded devices</title>
-      <link>https://y-ates.github.io/posts/embedded/</link>
+      <title>DOM-Clobbering</title>
+      <link>https://y-ates.github.io/secresearch/domclobbering/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>torproxy</title>
+      <link>https://y-ates.github.io/generaldev/torproxy/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
       
-      <guid>https://y-ates.github.io/posts/embedded/</guid>
-      <description>Developing an automatic plant irrigation system I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.
+      <guid>https://y-ates.github.io/generaldev/torproxy/</guid>
+      <description>I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;ldquo;dockerized&amp;rdquo; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+    </item>
+    
+    <item>
+      <title>Developing an automatic plant irrigation system</title>
+      <link>https://y-ates.github.io/embedded/arduino-plantlife/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/embedded/arduino-plantlife/</guid>
+      <description>I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.
 Actually, it was pretty fun. But there were some problems for which I still don&amp;rsquo;t have a solution for. E.g. Arduino IDE not pushing the code with the following error message:
-avrdude: stk500_recv(): programmer is not responding.</description>
-    </item>
-    
-    <item>
-      <title>Researching IT-Security!</title>
-      <link>https://y-ates.github.io/posts/research/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://y-ates.github.io/posts/research/</guid>
-      <description>:EXPORT_FILE_NAME: auto-set-lastmod
-DOM-Clobbering </description>
-    </item>
-    
-    <item>
-      <title>Solving challenges using Capture-The-Flags!</title>
-      <link>https://y-ates.github.io/posts/ctf/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://y-ates.github.io/posts/ctf/</guid>
-      <description>CTF Challenge 1 </description>
+avrdude: stk500_recv(): programmer is not responding. There were some posts on the Internet like StackOverflow, but those weren&amp;rsquo;t the solutions.</description>
     </item>
     
     <item>
@@ -56,16 +55,7 @@ DOM-Clobbering </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://y-ates.github.io/ctf/</guid>
-      <description> Solving challenges using Capture-The-Flags!  CTF Challenge 1  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 Raspberry DUMMY    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://y-ates.github.io/desktop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://y-ates.github.io/desktop/</guid>
-      <description>BeepBoop - I am a program!  torproxy   I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;#34;dockerized&amp;#34; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+      <description> CTF  CTF Challenge one!   test Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 Raspberry DUMMY    </description>
     </item>
     
     <item>
@@ -74,16 +64,25 @@ DOM-Clobbering </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://y-ates.github.io/embedded/</guid>
-      <description>Development for embedded devices  Developing an automatic plant irrigation system   I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.  Actually, it was pretty fun. But there were some problems for which I still don&amp;#39;t have a solution for. E.g. Arduino IDE not pushing the code with the following error message: avrdude: stk500_recv(): programmer is not responding.</description>
+      <description>Developing embedded devices  Developing an automatic plant irrigation system   I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.  Actually, it was pretty fun. But there were some problems for which I still don&amp;#39;t have a solution for. E.g. Arduino IDE not pushing the code with the following error message: avrdude: stk500_recv(): programmer is not responding.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://y-ates.github.io/research/</link>
+      <link>https://y-ates.github.io/generaldev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://y-ates.github.io/research/</guid>
-      <description> Researching IT-Security!  DOM-Clobbering  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 DOM-Clobbering DUMMY    </description>
+      <guid>https://y-ates.github.io/generaldev/</guid>
+      <description>General Development  torproxy   I am using Tor for quite a while now and it got really fast over the years. Meanwhile there are several options to run traffic through Tor and one of them is using a &amp;#34;dockerized&amp;#34; container. The most used image is probably the one from this repository: torproxy-by-dperson. And to run all traffic through this docker it was necessary to do some iptables, but luckily there was also a shell script given.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://y-ates.github.io/secresearch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/</guid>
+      <description> Researching IT-Security!  TODO DOM-Clobbering  Footnotes   .my-table th, .my-table td { padding: 20px; text-align: left; }    # Topic URL     0 DOM-Clobbering DUMMY    </description>
     </item>
     
   </channel>
