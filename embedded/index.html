@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <title>  &middot; Yakup Ates </title>
+	<head>
+		<title> Embeddeds &middot; Yakup Ates </title>
 
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="generator" content="Hugo 0.69.2" />
 
@@ -35,10 +35,10 @@
 
 
 
-    </head>
+	</head>
 
-    <body>
-        <header>
+	<body>
+		<header>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -104,98 +104,37 @@
 </nav>
 </header>
 
-        <div class="container wrapper">
-            <h1><a href="https://y-ates.github.io/embedded/"></a></h1>
-            <span class="post-date">0001-01-01</span>
-            <div class="post-content">
-                
-<h2 id="headline-1">
-Developing embedded devices
-</h2>
-<h3 id="headline-2">
-Developing an automatic plant irrigation system
-</h3>
-<p>
- I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.
-</p>
-<p>
- Actually, it was pretty fun. But there were some problems for which I
- still don&#39;t have a solution for. E.g. Arduino IDE not pushing the code
- with the following error message:
-</p>
-<div class="src src-text">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">    avrdude: stk500_recv(): programmer is not responding.</code></pre></div>
-</div>
-<p>
- There were some posts on the Internet like <a href="https://stackoverflow.com/questions/19765037/arduino-sketch-upload-issue-avrdude-stk500-recv-programmer-is-not-respondi">StackOverflow</a>,
- but those weren&#39;t the solutions. I would love to find a solution for
- this, as one of my Arduino&#39;s is useless for now because of that.
-</p>
-<p>
- The project I was working on was an automatic plant watering system with
- a webinterface. It had a DHT11, a Photoresistor and a Soil Moisture
- sensor. With a given threshold reached (for Soil Moisture Sensor and
- Photoresistor), the Arduino would run the pump to water the plant.
-</p>
-<p>
- Those sensor data were transferred via a 433 MHz radio module (sender:
- Arduino, receiver: Raspberry Pi). The Raspberry Pi would then insert
- those sensor data into a MySQL database. The webinterface
- (also hosted on the Pi) then queries the database, gets the sensor data
- and plots them to graphs which looks like the following:
-</p>
-<p>
- <img src="/img/webinterface_bot.png" alt="/img/webinterface_bot.png" title="/img/webinterface_bot.png" />
-</p>
-<h4 id="headline-3">
-Footnotes
-</h4>
-<p>
-Yeah, right, talk is cheap. Where was the code? :D
-</p>
-<style>
-.my-table th,
-.my-table td {
-	padding: 20px;
-	text-align: left;
-}
-</style>
-<table class="my-table">
-<thead>
-<tr>
-<th class="align-right">#</th>
-<th>Hardware</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="align-right">0</td>
-<td>Raspberry</td>
-<td><a href="https://github.com/y-ates/plantlife-pi-proxy">GitHub:plantlife-pi-proxy</a></td>
-</tr>
-<tr>
-<td class="align-right">1</td>
-<td>Raspberry</td>
-<td><a href="https://github.com/y-ates/plantlife-pi-webinterface">GitHub:plantlife-pi-webinterface</a></td>
-</tr>
-<tr>
-<td class="align-right">2</td>
-<td>Arduino</td>
-<td><a href="https://github.com/y-ates/plantlife-arduino">GitHub:plantlife-arduino</a></td>
-</tr>
-</tbody>
-</table>
+		<div class="container wrapper">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>Embeddeds</h1>
+				</div>
+			</div>
+			<ul id="post-list">
+                	
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://y-ates.github.io/embedded/arduino-plantlife/">Developing an automatic plant irrigation system</a></h4>
+							<h4 class="post-date">2016-06-02</h4>
+						</div>
+						<div class="post-summary"><p>I was working with an Arduino the last few weeks and never did before. But not only an Arduino, the Arduino was cooperating with an circuit and communicating with a Raspberry Pi.
+Actually, it was pretty fun. But there were some problems for which I still don&rsquo;t have a solution for. E.g. Arduino IDE not pushing the code with the following error message:
+avrdude: stk500_recv(): programmer is not responding. There were some posts on the Internet like StackOverflow, but those weren&rsquo;t the solutions.</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://y-ates.github.io/embedded/arduino-plantlife/">Read More</a>
+						</div>
+					</div>
+				</li>
+			
+			</ul>
+            
 
-            </div>
-            
-            <div class="post-comments">
-                
-            </div>
-            
-            <div class="push"></div>
-        </div>
-        <footer class="footer text-center">
+
+
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
 <p>Copyright &copy; 2020 Yakup Ates -
 <span class="credit">
 	Powered by
@@ -206,4 +145,5 @@ Yeah, right, talk is cheap. Where was the code? :D
 </p>
 </footer>
 
-    </body>
+	</body>
+</html>
