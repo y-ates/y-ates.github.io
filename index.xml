@@ -6,7 +6,7 @@
     <description>Recent content on Yakup Ates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://y-ates.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -57,6 +57,16 @@ avrdude: stk500_recv(): programmer is not responding. There were some posts on t
       
       <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Creating custom wordlists</title>
+      <link>https://y-ates.github.io/secresearch/custom_wordlist_generation/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/custom_wordlist_generation/</guid>
+      <description>A brute-force attack on passwords/usernames can be way more efficient than to use some standard wordfiles like for example the famous &amp;ldquo;rockyou.txt&amp;rdquo;. In the following I will share a technique to generate your own custom wordlist.
+First of all, you should gather some information about your target and analyze it. You are looking for most used words, hobbies and anything that your target could use in his password. Write all these words down into a file whereas each word is separated by a new line.</description>
     </item>
     
     <item>
