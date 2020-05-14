@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <title>  &middot; Yakup Ates </title>
+	<head>
+		<title> SecResearches &middot; Yakup Ates </title>
 
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
 
 
@@ -34,10 +34,10 @@
 
 
 
-    </head>
+	</head>
 
-    <body>
-        <header>
+	<body>
+		<header>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -103,351 +103,63 @@
 </nav>
 </header>
 
-        <div class="container wrapper">
-            <h1><a href="https://y-ates.github.io/secresearch/"></a></h1>
-            <span class="post-date">0001-01-01</span>
-            <div class="post-content">
-                
-<h2 id="headline-1">
-Researching IT-Security!
-</h2>
-<h3 id="headline-2">
-Serialized Objects
-</h3>
-<p>
-Object serialization is an important aspect of any non-trivial program. When
-running around <a href="https://www.youtube.com/watch?v=EbI0cMyyw_M">through the jungle</a> one easily encounters these types of
-files. 
-</p>
-<p>
-As serialized files will get deserialized at some but by the application an
-interesting vulnerability comes into mind <strong><a href="https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data">Insecure Object Deserialization</a></strong>.
-An Insecure Object Deserialization occurs when an application attempts to
-deserialize untrusted data. 
-Without experience it can get pretty tricky to detect serialized files and thus
-one might overlook this type of vulnerability.
-</p>
-<p>
-In the following I will demonstrate characteristics of serialized objects in
-Java, PHP and Python.
-</p>
-<h4 id="headline-3">
-Java
-</h4>
-<p>
-Detecting serialized objects by Java is fairly easy. The serialized output
- will always start with a constant hex value: <code class="verbatim">aced00057372</code>.
- The table below should serve us as an explanation of these bytes:
-</p>
-<style>
-.my-table th,
-.my-table td {
-padding: 20px;
-text-align: left;
-}
-
-.underline span {
-text-decoration: underline;
-}
-</style>
-<table class="my-table">
-<thead>
-<tr>
-<th>Constant</th>
-<th class="align-right">Hex value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>STREAM_MAGIC</td>
-<td class="align-right">aced</td>
-</tr>
-<tr>
-<td>STREAM_VERSION</td>
-<td class="align-right">00005</td>
-</tr>
-<tr>
-<td>TC_OBJECT</td>
-<td class="align-right">73</td>
-</tr>
-<tr>
-<td>TC_CLASSDESC</td>
-<td class="align-right">72</td>
-</tr>
-</tbody>
-</table>
-<p>
- So, whenever you see these hex values in a serialized file you know its
- serialization is made using Java!
-</p>
-<h4 id="headline-4">
-PHP
-</h4>
-<p>
-Serialized objects by PHP are kind of unique, too. But you can&#39;t just check
- for a fixed hex value to detect it. The cool part is, you can understand the
- internal logic of a serialized object by PHP without deserializing
- it. Nevertheless, I would recommend deserializing it when attempting to dig
- deeper just to avoid some headaches.
-</p>
-<p>
- Lets just jump into some examples and examine these closely:
-</p>
-<table class="my-table">
-<thead>
-<tr>
-<th>Plaintext</th>
-<th>Serialized</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>NULL</td>
-<td>N;</td>
-</tr>
-<tr>
-<td>myVar = true</td>
-<td>myVar:1;</td>
-</tr>
-<tr>
-<td>myVar = false</td>
-<td>myVar:0;</td>
-</tr>
-<tr>
-<td>i = 1337</td>
-<td>i:1337;</td>
-</tr>
-<tr>
-<td>j = 1.337</td>
-<td>j:1.337;</td>
-</tr>
-<tr>
-<td>myString = &#34;test&#34;</td>
-<td>s:4:&#34;test&#34;;</td>
-</tr>
-<tr>
-<td>myArray = array(1, 2, 3)</td>
-<td>myArray:3:{i:1;i:2;i:3;};</td>
-</tr>
-<tr>
-<td>myArray = array(&#34;ref&#34; =&gt; 0)</td>
-<td>myarray:1:{s:3:&#34;ref&#34;;i:0};</td>
-</tr>
-</tbody>
-</table>
-<style>
-span.underline {
-text-decoration: underline;
-}
-</style>
-<p>
-We can see that each instruction gets transformed into some kind of
- shortform. We can still see the names of variables and their values. 
- A <span style="text-decoration: underline;">NULL byte</span> gets transformed into &#34;N;&#34; and <span style="text-decoration: underline;">boolean values</span> in their
- respective values of 0 or 1. 
- <span style="text-decoration: underline;">Integers and floats</span> will be transformed into <code class="verbatim">&lt;variable name&gt;:&lt;variable value&gt;;</code>. 
- <span style="text-decoration: underline;">Strings</span> on the other hand will also include their respective length, thus:
- <code class="verbatim">&lt;variable name&gt;:&lt;length of string&gt;:&lt;variable value&gt;;</code>. 
- <span style="text-decoration: underline;">Arrays</span> kind of synergize the format of strings and integers and also
- introduce curly brackets:
- <code class="verbatim">&lt;variable name&gt;::&lt;length of array&gt;:{&lt;serialized variables&gt;;}</code>. 
- <span style="text-decoration: underline;">Arrays with keys</span> get a little bit more complicated as the content of the
- curly brackets also include the references, but all in all the concept
- overlaps
-</p>
-<p>
- If you take this table as a few vocabularies or just remember this type
- format, you will be easily recognize PHP serialized objects!
-</p>
-<h4 id="headline-5">
-Python
-</h4>
-<p>
-Using Python one can choose to serialize objects with JSON. But Python&#39;s native
- serialization format is made possible with Pickle. Also note that
- serialization with JSON has the disadvantage of having restrictions like not
- being able to represent pointer sharing.
-</p>
-<p>
- Lets just jump into an example:
-</p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> pickle
-
-  serializeMe <span style="color:#f92672">=</span> dict(myArray <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>],
-					 myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
-					 myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
-					 myBoolean <span style="color:#f92672">=</span> True,
-					 myBoolean2 <span style="color:#f92672">=</span> False,
-					 myNone <span style="color:#f92672">=</span> None)
-
-  <span style="color:#66d9ef">return</span> pickle<span style="color:#f92672">.</span>dumps(serializeMe, protocol<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)</code></pre></div>
-</div>
-<pre class="example">
-b&#39;(dp0\nVmyArray\np1\n(lp2\nI1\naI3\naI3\naI7\nasVmyString\np3\nV1337\np4\nsVmyNumber\np5\nI1337\nsVmyBoolean\np6\nI01\nsVmyBoolean2\np7\nI00\nsVmyNone\np8\nNs.&#39;
-</pre>
-<p>
- As we can see, we defined a dictionary containing some data types (Array,
- String, Integer, Boolean, None). This way we can examine its behavior in
- these different scenarios. 
-</p>
-<p>
- The first thing we notice is that Python returns the serialized dictionary
- with raw bytes (also indicated by the prefix <code class="verbatim">b</code>), which also contains ASCII
- characters. Looking close enough, one could extract variable names and their
- values without deserialization. However, I explicitly defined the lowest
- protocol (<code>protocol=0</code>). Most applications will probably use the default, which is
- level 3 in Python v3.0 and level 4 in Python 3.8. 
-</p>
-<p>
- The following example will serialize the dictionary with the default of Python 3.8:
-</p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> pickle
-
-  serializeMe <span style="color:#f92672">=</span> dict(myArray <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>],
-					 myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
-					 myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
-					 myBoolean <span style="color:#f92672">=</span> True,
-					 myBoolean2 <span style="color:#f92672">=</span> False,
-					 myNone <span style="color:#f92672">=</span> None)
-
-  <span style="color:#66d9ef">return</span> pickle<span style="color:#f92672">.</span>dumps(serializeMe)</code></pre></div>
-</div>
-<pre class="example">
-b&#39;\x80\x04\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\x01K\x03K\x03K\x07e\x8c\x08myString\x94\x8c\x041337\x94\x8c\x08myNumber\x94M9\x05\x8c\tmyBoolean\x94\x88\x8c\nmyBoolean2\x94\x89\x8c\x06myNone\x94Nu.&#39;
-</pre>
-<p>
- This time there are way more non-ASCII bytes. Thus, I just took all
- non-ASCII bytes out of the string above and tried to print these using 
- <code class="verbatim">echo -e</code>. 
- But nothing…, this won&#39;t help.
- Not only that, but Pickle also has several other protocols to choose from for
- serialization, for example the &#34;HIGHEST_PROTOCOL&#34;. 
-</p>
-<div class="src src-python">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> pickle
-
-  serializeMe <span style="color:#f92672">=</span> dict(myArray <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>],
-					 myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
-					 myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
-					 myBoolean <span style="color:#f92672">=</span> True,
-					 myBoolean2 <span style="color:#f92672">=</span> False,
-					 myNone <span style="color:#f92672">=</span> None)
-
-  <span style="color:#66d9ef">return</span> pickle<span style="color:#f92672">.</span>dumps(serializeMe, protocol<span style="color:#f92672">=</span>pickle<span style="color:#f92672">.</span>HIGHEST_PROTOCOL)</code></pre></div>
-</div>
-<pre class="example">
-b&#39;\x80\x05\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\x01K\x03K\x03K\x07e\x8c\x08myString\x94\x8c\x041337\x94\x8c\x08myNumber\x94M9\x05\x8c\tmyBoolean\x94\x88\x8c\nmyBoolean2\x94\x89\x8c\x06myNone\x94Nu.&#39;
-</pre>
-<p>
- Comparing all these outputs:
-</p>
-<pre class="example">
-b&#39;(dp0\nVmyArray\np1\n(lp2\nI1\naI3\naI3\naI7\nasVmyString\np3\nV1337\np4\nsVmyNumber\np5\nI1337\nsVmyBoolean\np6\nI01\nsVmyBoolean2\np7\nI00\nsVmyNone\np8\nNs.&#39;
-</pre>
-<pre class="example">
-b&#39;\x80\x05\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\x01K\x03K\x03K\x07e\x8c\x08myString\x94\x8c\x041337\x94\x8c\x08myNumber\x94M9\x05\x8c\tmyBoolean\x94\x88\x8c\nmyBoolean2\x94\x89\x8c\x06myNone\x94Nu.&#39;
-</pre>
-<pre class="example">
-b&#39;\x80\x05\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\x01K\x03K\x03K\x07e\x8c\x08myString\x94\x8c\x041337\x94\x8c\x08myNumber\x94M9\x05\x8c\tmyBoolean\x94\x88\x8c\nmyBoolean2\x94\x89\x8c\x06myNone\x94Nu.&#39;
-</pre>
-<p>
- The comparison reveals that Python v3.8 uses its &#34;HIGHEST_PROTOCOL&#34; as its
- default, thus the output 2. and 3. do not differ. Furthermore, it shows that
- the detection whether it is serialized or not could get tricky if we attempt
- to detect it based on its raw content.
-</p>
-<p>
- <strong>The good part</strong> is, that we don&#39;t need to dig that deep.
- Objects serialized with Pickle will start with a <code class="verbatim">b</code> as stated above and
- will end the string with a dot <code class="verbatim">.</code>. Thus, when seeing these in the wild we know
- it&#39;s some Python serialized stuff :).
-</p>
-<h3 id="headline-6">
-DOM-Clobbering
-</h3>
-<h3 id="headline-7">
-Creating custom wordlists
-</h3>
-<p>
-   A brute-force attack on passwords/usernames using a custom generated wordlist
-   can be way more efficient than to
-   use some standard wordfiles like for example the famous &#34;rockyou.txt&#34;.
-   In the following I will share a technique to generate your own custom
-   wordlist.
-</p>
-<p>
-   First of all, you should gather some information about your target and
-   analyze it. You are looking for most used words, hobbies and anything that
-   your target could use in his password. Write all these words down into a file
-   whereas each word is separated by a new line. For example:
-</p>
-<div class="src src-text">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">John
-Smith
-December
-Sunny
-Motorcycle
-Coke
-BMW</code></pre></div>
-</div>
-<p>
-   Then you can add a year into each option. The following will print each word
-   itself and the word concatenated with the year &#34;2020&#34; back to the file (just
-   add/replace 2020 in the following line with whatever you want to add e.g. a
-   question mark &#34;?&#34;):
-</p>
-<div class="src src-sh">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">for</span> i in <span style="color:#66d9ef">$(</span>cat wordlist.txt<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span> echo $i; echo <span style="color:#66d9ef">$(</span>i<span style="color:#66d9ef">)</span>2020; <span style="color:#66d9ef">done</span> &gt; wordlist.txt</code></pre></div>
-</div>
-<p>
-   Now we want to use <code class="verbatim">hashcat</code> to generate some more options based on a
-   configured rule. We will use &#34;best64.rule&#34;, but you can use anything you want
-   (go on and experiment). Generally, these rules (in Kali) are located at
-   <code>/usr/share/hashcat/rules</code>. 
-</p>
-<div class="src src-sh">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hashcat --force --stdout wordlist.txt -r /usr/share/hashcat/rules/best64.rule</code></pre></div>
-</div>
-<p>
-   So this line mutates all lines, reverses, rotates, plays with character cases, appends
-   numbers etc..
-   Note, that you can use several rules in once just append another 
-   <code class="verbatim">-r/path/to/rule</code>.
-</p>
-<p>
-   Of course, testing the same password several times doesn&#39;t make any sense, so
-   go on and filter all duplicates:
-</p>
-<div class="src src-sh">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cat wordlist | sort -u &gt; wordlist.txt</code></pre></div>
-</div>
-<p>
-   In case we also know that the password is at least x characters long
-   (e.g. 6), we don&#39;t need to test any password that is less than 6 characters
-   long, so we can also remove those:
-</p>
-<div class="src src-sh">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cat wordlist | awk <span style="color:#e6db74">&#39;length($0) &gt; 6&#39;</span> &gt; wordlist.txt</code></pre></div>
-</div>
-<p>
-   And here you go! You just generated your custom wordlist which is probably
-   (hopefully?) shorter than rockyou.txt :).
-</p>
-<p>
-   <strong>-EOF-</strong>
-</p>
-
-            </div>
+		<div class="container wrapper">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>SecResearches</h1>
+				</div>
+			</div>
+			<ul id="post-list">
+                	
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://y-ates.github.io/secresearch/serialized_objects/">Serialized Objects</a></h4>
+							<h4 class="post-date">2020-04-20</h4>
+						</div>
+						<div class="post-summary"><p>Object serialization is an important aspect of any non-trivial program. When running around through the jungle one easily encounters these types of files.
+As serialized files will get deserialized at some but by the application an interesting vulnerability comes into mind Insecure Object Deserialization. An Insecure Object Deserialization occurs when an application attempts to deserialize untrusted data. Without experience it can get pretty tricky to detect serialized files and thus one might overlook this type of vulnerability.</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://y-ates.github.io/secresearch/serialized_objects/">Read More</a>
+						</div>
+					</div>
+				</li>
+			
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://y-ates.github.io/secresearch/domclobbering/">DOM-Clobbering</a></h4>
+							<h4 class="post-date">2020-05-03</h4>
+						</div>
+						<div class="post-summary"><p></p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://y-ates.github.io/secresearch/domclobbering/">Read More</a>
+						</div>
+					</div>
+				</li>
+			
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://y-ates.github.io/secresearch/custom_wordlist_generation/">Creating custom wordlists</a></h4>
+							<h4 class="post-date">2020-05-10</h4>
+						</div>
+						<div class="post-summary"><p>A brute-force attack on passwords/usernames using a custom generated wordlist can be way more efficient than to use some standard wordfiles like for example the famous &ldquo;rockyou.txt&rdquo;. In the following I will share a technique to generate your own custom wordlist.
+First of all, you should gather some information about your target and analyze it. You are looking for most used words, hobbies and anything that your target could use in his password.</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://y-ates.github.io/secresearch/custom_wordlist_generation/">Read More</a>
+						</div>
+					</div>
+				</li>
+			
+			</ul>
             
-            <div class="post-comments">
-                
-            </div>
-            
-            <div class="push"></div>
-        </div>
-        <footer class="footer text-center">
+
+
+
+			<div class="push"></div>
+		</div>
+		<footer class="footer text-center">
 <p>Copyright &copy; 2020 Yakup Ates -
 <span class="credit">
 	Powered by
@@ -458,4 +170,5 @@ BMW</code></pre></div>
 </p>
 </footer>
 
-    </body>
+	</body>
+</html>
