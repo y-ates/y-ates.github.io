@@ -6,10 +6,29 @@
     <description>Recent content in it on Yakup Ates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 May 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://y-ates.github.io/tags/it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>XSS Polyglots</title>
+      <link>https://y-ates.github.io/secresearch/xss-polyglots/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/xss-polyglots/</guid>
+      <description>In the following I want to introduce several so called &amp;ldquo;XSS Polyglots&amp;rdquo;. A XSS polyglot is an XSS attack vector which is able to execute in various contexts. Thus, one can inject less attack vectors, get a lot of attack surface covered and analyze the behavior of the application using less requests. Furthermore, as it covers several attack vectors in one, the probability to develop a successful attack vector increases. Another reason to use a XSS polyglot is to bypass the Content-Security-Policy (CSP), which is an added security layer for XSS detection and mitigation, provided by the browser.</description>
+    </item>
+    
+    <item>
+      <title>Creating custom wordlists</title>
+      <link>https://y-ates.github.io/secresearch/custom_wordlist_generation/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/custom_wordlist_generation/</guid>
+      <description>A brute-force attack on passwords/usernames using a custom generated wordlist can be way more efficient than to use some standard wordfiles like for example the famous &amp;ldquo;rockyou.txt&amp;rdquo;. In the following I will share a technique to generate your own custom wordlist.
+First of all, you should gather some information about your target and analyze it. You are looking for most used words, hobbies and anything that your target could use in his password.</description>
+    </item>
     
     <item>
       <title>Serialized Objects</title>
@@ -28,16 +47,6 @@ As serialized files will get deserialized at some but by the application an inte
       
       <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Creating custom wordlists</title>
-      <link>https://y-ates.github.io/secresearch/custom_wordlist_generation/</link>
-      <pubDate>Sun, 10 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://y-ates.github.io/secresearch/custom_wordlist_generation/</guid>
-      <description>A brute-force attack on passwords/usernames using a custom generated wordlist can be way more efficient than to use some standard wordfiles like for example the famous &amp;ldquo;rockyou.txt&amp;rdquo;. In the following I will share a technique to generate your own custom wordlist.
-First of all, you should gather some information about your target and analyze it. You are looking for most used words, hobbies and anything that your target could use in his password.</description>
     </item>
     
   </channel>

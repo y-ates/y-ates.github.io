@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://y-ates.github.io/secresearch/xss-polyglots/</loc>
+    <lastmod>2020-10-06T00:37:56+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://y-ates.github.io/ctf/ctf1/</loc>
     <lastmod>2020-05-03T14:03:42+02:00</lastmod>
   </url>
@@ -13,78 +18,78 @@
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/secresearch/serialized_objects/</loc>
-    <lastmod>2020-05-04T21:57:33+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://y-ates.github.io/embedded/arduino-plantlife/</loc>
     <lastmod>2020-05-03T15:09:32+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/secresearch/domclobbering/</loc>
-    <lastmod>2020-05-03T19:01:20+02:00</lastmod>
+    <loc>https://y-ates.github.io/secresearch/custom_wordlist_generation/</loc>
+    <lastmod>2020-10-06T00:37:57+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://y-ates.github.io/secresearch/custom_wordlist_generation/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <loc>https://y-ates.github.io/secresearch/serialized_objects/</loc>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://y-ates.github.io/secresearch/domclobbering/</loc>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/c/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/categories/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/cve/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/categories/dom/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/it/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/it-security/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/research/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/secresearch/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/tags/vulnerabilities/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://y-ates.github.io/</loc>
-    <lastmod>2020-05-14T20:55:03+02:00</lastmod>
+    <lastmod>2020-10-06T00:37:59+02:00</lastmod>
   </url>
   
   <url>
