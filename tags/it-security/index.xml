@@ -6,11 +6,11 @@
     <description>Recent content in it-security on Yakup Ates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Dec 2020 19:56:44 +0100</lastBuildDate><atom:link href="https://y-ates.github.io/tags/it-security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Dec 2020 20:04:04 +0100</lastBuildDate><atom:link href="https://y-ates.github.io/tags/it-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Researching IT-Security!</title>
       <link>https://y-ates.github.io/secresearch/</link>
-      <pubDate>Sun, 13 Dec 2020 19:56:44 +0100</pubDate>
+      <pubDate>Sun, 13 Dec 2020 20:04:04 +0100</pubDate>
       
       <guid>https://y-ates.github.io/secresearch/</guid>
       <description>XSS Polyglots In the following I want to introduce several so called &amp;ldquo;XSS Polyglots&amp;rdquo;. A XSS polyglot is an XSS attack vector which is able to execute in various contexts. Thus, one can inject less attack vectors, get a lot of attack surface covered and analyze the behavior of the application using less requests. Furthermore, as it covers several attack vectors in one, the probability to develop a successful attack vector increases.</description>
