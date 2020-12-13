@@ -31,6 +31,15 @@ First of all, you should gather some information about your target and analyze i
     </item>
     
     <item>
+      <title>DOM-Clobbering</title>
+      <link>https://y-ates.github.io/secresearch/domclobbering/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Serialized Objects</title>
       <link>https://y-ates.github.io/secresearch/serialized_objects/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0200</pubDate>
@@ -38,15 +47,6 @@ First of all, you should gather some information about your target and analyze i
       <guid>https://y-ates.github.io/secresearch/serialized_objects/</guid>
       <description>Object serialization is an important aspect of any non-trivial program. When running around through the jungle one easily encounters these types of files.
 As serialized files will get deserialized at some but by the application an interesting vulnerability comes into mind Insecure Object Deserialization. An Insecure Object Deserialization occurs when an application attempts to deserialize untrusted data. Without experience it can get pretty tricky to detect serialized files and thus one might overlook this type of vulnerability.</description>
-    </item>
-    
-    <item>
-      <title>DOM-Clobbering</title>
-      <link>https://y-ates.github.io/secresearch/domclobbering/</link>
-      <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
-      <description></description>
     </item>
     
   </channel>

@@ -6,11 +6,7 @@
     <description>Recent content in research on Yakup Ates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://y-ates.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 24 Oct 2020 00:20:50 +0200</lastBuildDate><atom:link href="https://y-ates.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>XSS Polyglots</title>
       <link>https://y-ates.github.io/secresearch/xss-polyglots/</link>
@@ -47,6 +43,15 @@ As serialized files will get deserialized at some but by the application an inte
       
       <guid>https://y-ates.github.io/secresearch/domclobbering/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://y-ates.github.io/secresearch/secresearch/</link>
+      <pubDate>Sat, 24 Oct 2020 00:20:50 +0200</pubDate>
+      
+      <guid>https://y-ates.github.io/secresearch/secresearch/</guid>
+      <description>Researching IT-Security! XSS Polyglots In the following I want to introduce several so called &amp;ldquo;XSS Polyglots&amp;rdquo;. A XSS polyglot is an XSS attack vector which is able to execute in various contexts. Thus, one can inject less attack vectors, get a lot of attack surface covered and analyze the behavior of the application using less requests. Furthermore, as it covers several attack vectors in one, the probability to develop a successful attack vector increases.</description>
     </item>
     
   </channel>
