@@ -415,20 +415,20 @@ Python
 </h4>
 <div id="outline-text-headline-7" class="outline-text-4">
 <p>Using Python one can choose to serialize objects with JSON. But Python&#39;s native
- serialization format is made possible with Pickle. Also note that
- serialization with JSON has the disadvantage of having restrictions like not
- being able to represent pointer sharing.</p>
+  serialization format is made possible with Pickle. Also note that
+  serialization with JSON has the disadvantage of having restrictions like not
+  being able to represent pointer sharing.</p>
 <p>
- Lets just jump into an example:</p>
+  Lets just jump into an example:</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> pickle
 
   serializeMe <span style="color:#f92672">=</span> dict(myArray <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>],
-					 myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
-					 myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
-					 myBoolean <span style="color:#f92672">=</span> True,
-					 myBoolean2 <span style="color:#f92672">=</span> False,
-					 myNone <span style="color:#f92672">=</span> None)
+				  myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
+				  myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
+				  myBoolean <span style="color:#f92672">=</span> True,
+				  myBoolean2 <span style="color:#f92672">=</span> False,
+				  myNone <span style="color:#f92672">=</span> None)
 
   <span style="color:#66d9ef">return</span> pickle<span style="color:#f92672">.</span>dumps(serializeMe, protocol<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)</code></pre></div>
 </div>
@@ -436,27 +436,27 @@ Python
 b&#39;(dp0\nVmyArray\np1\n(lp2\nI1\naI3\naI3\naI7\nasVmyString\np3\nV1337\np4\nsVmyNumber\np5\nI1337\nsVmyBoolean\np6\nI01\nsVmyBoolean2\np7\nI00\nsVmyNone\np8\nNs.&#39;
 </pre>
 <p>
- As we can see, we defined a dictionary containing some data types (Array,
- String, Integer, Boolean, None). This way we can examine its behavior in
- these different scenarios. </p>
+  As we can see, we defined a dictionary containing some data types (Array,
+  String, Integer, Boolean, None). This way we can examine its behavior in
+  these different scenarios. </p>
 <p>
- The first thing we notice is that Python returns the serialized dictionary
- with raw bytes (also indicated by the prefix <code class="verbatim">b</code>), which also contains ASCII
- characters. Looking close enough, one could extract variable names and their
- values without deserialization. However, I explicitly defined the lowest
- protocol (<code>protocol=0</code>). Most applications will probably use the default, which is
- level 3 in Python v3.0 and level 4 in Python 3.8. </p>
+  The first thing we notice is that Python returns the serialized dictionary
+  with raw bytes (also indicated by the prefix <code class="verbatim">b</code>), which also contains ASCII
+  characters. Looking close enough, one could extract variable names and their
+  values without deserialization. However, I explicitly defined the lowest
+  protocol (<code>protocol=0</code>). Most applications will probably use the default, which is
+  level 3 in Python v3.0 and level 4 in Python 3.8. </p>
 <p>
- The following example will serialize the dictionary with the default of Python 3.8:</p>
+  The following example will serialize the dictionary with the default of Python 3.8:</p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> pickle
 
   serializeMe <span style="color:#f92672">=</span> dict(myArray <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>],
-					 myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
-					 myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
-					 myBoolean <span style="color:#f92672">=</span> True,
-					 myBoolean2 <span style="color:#f92672">=</span> False,
-					 myNone <span style="color:#f92672">=</span> None)
+				  myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
+				  myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
+				  myBoolean <span style="color:#f92672">=</span> True,
+				  myBoolean2 <span style="color:#f92672">=</span> False,
+				  myNone <span style="color:#f92672">=</span> None)
 
   <span style="color:#66d9ef">return</span> pickle<span style="color:#f92672">.</span>dumps(serializeMe)</code></pre></div>
 </div>
@@ -464,21 +464,21 @@ b&#39;(dp0\nVmyArray\np1\n(lp2\nI1\naI3\naI3\naI7\nasVmyString\np3\nV1337\np4\ns
 b&#39;\x80\x04\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\x01K\x03K\x03K\x07e\x8c\x08myString\x94\x8c\x041337\x94\x8c\x08myNumber\x94M9\x05\x8c\tmyBoolean\x94\x88\x8c\nmyBoolean2\x94\x89\x8c\x06myNone\x94Nu.&#39;
 </pre>
 <p>
- This time there are way more non-ASCII bytes. Thus, I just took all
- non-ASCII bytes out of the string above and tried to print these using 
- <code class="verbatim">echo -e</code>. 
- But nothing…, this won&#39;t help.
- Not only that, but Pickle also has several other protocols to choose from for
- serialization, for example the &#34;HIGHEST_PROTOCOL&#34;. </p>
+  This time there are way more non-ASCII bytes. Thus, I just took all
+  non-ASCII bytes out of the string above and tried to print these using 
+  <code class="verbatim">echo -e</code>. 
+  But nothing…, this won&#39;t help.
+  Not only that, but Pickle also has several other protocols to choose from for
+  serialization, for example the &#34;HIGHEST_PROTOCOL&#34;. </p>
 <div class="src src-python">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#f92672">import</span> pickle
 
   serializeMe <span style="color:#f92672">=</span> dict(myArray <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>],
-					 myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
-					 myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
-					 myBoolean <span style="color:#f92672">=</span> True,
-					 myBoolean2 <span style="color:#f92672">=</span> False,
-					 myNone <span style="color:#f92672">=</span> None)
+				  myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1337&#34;</span>,
+				  myNumber <span style="color:#f92672">=</span> <span style="color:#ae81ff">1337</span>,
+				  myBoolean <span style="color:#f92672">=</span> True,
+				  myBoolean2 <span style="color:#f92672">=</span> False,
+				  myNone <span style="color:#f92672">=</span> None)
 
   <span style="color:#66d9ef">return</span> pickle<span style="color:#f92672">.</span>dumps(serializeMe, protocol<span style="color:#f92672">=</span>pickle<span style="color:#f92672">.</span>HIGHEST_PROTOCOL)</code></pre></div>
 </div>
@@ -486,7 +486,7 @@ b&#39;\x80\x04\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\
 b&#39;\x80\x05\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\x01K\x03K\x03K\x07e\x8c\x08myString\x94\x8c\x041337\x94\x8c\x08myNumber\x94M9\x05\x8c\tmyBoolean\x94\x88\x8c\nmyBoolean2\x94\x89\x8c\x06myNone\x94Nu.&#39;
 </pre>
 <p>
- Comparing all these outputs:</p>
+  Comparing all these outputs:</p>
 <pre class="example">
 b&#39;(dp0\nVmyArray\np1\n(lp2\nI1\naI3\naI3\naI7\nasVmyString\np3\nV1337\np4\nsVmyNumber\np5\nI1337\nsVmyBoolean\np6\nI01\nsVmyBoolean2\np7\nI00\nsVmyNone\np8\nNs.&#39;
 </pre>
@@ -497,15 +497,15 @@ b&#39;\x80\x05\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\
 b&#39;\x80\x05\x95`\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x07myArray\x94]\x94(K\x01K\x03K\x03K\x07e\x8c\x08myString\x94\x8c\x041337\x94\x8c\x08myNumber\x94M9\x05\x8c\tmyBoolean\x94\x88\x8c\nmyBoolean2\x94\x89\x8c\x06myNone\x94Nu.&#39;
 </pre>
 <p>
- The comparison reveals that Python v3.8 uses its &#34;HIGHEST_PROTOCOL&#34; as its
- default, thus the output 2. and 3. do not differ. Furthermore, it shows that
- the detection whether it is serialized or not could get tricky if we attempt
- to detect it based on its raw content.</p>
+  The comparison reveals that Python v3.8 uses its &#34;HIGHEST_PROTOCOL&#34; as its
+  default, thus the output 2. and 3. do not differ. Furthermore, it shows that
+  the detection whether it is serialized or not could get tricky if we attempt
+  to detect it based on its raw content.</p>
 <p>
- <strong>The good part</strong> is, that we don&#39;t need to dig that deep.
- Objects serialized with Pickle will start with a <code class="verbatim">b</code> as stated above and
- will end the string with a dot <code class="verbatim">.</code>. Thus, when seeing these in the wild we know
- it&#39;s some Python serialized stuff :).</p>
+  <strong>The good part</strong> is, that we don&#39;t need to dig that deep.
+  Objects serialized with Pickle will start with a <code class="verbatim">b</code> as stated above and
+  will end the string with a dot <code class="verbatim">.</code>. Thus, when seeing these in the wild we know
+  it&#39;s some Python serialized stuff :).</p>
 </div>
 </div>
 </div>
