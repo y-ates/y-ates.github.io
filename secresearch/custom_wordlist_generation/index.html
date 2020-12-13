@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Creating custom wordlists &middot; Yakup Ates </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+
+
+
+
+<script src="/js/jquery.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://y-ates.github.io/css/nix.css">
+
+
+
+
+
+<link href="/css/Inconsolata_Open_Sans_Concert_One.css" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='https://y-ates.github.io/'>
+        Yakup Ates@/dev/null ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='https://y-ates.github.io/'>/home/Yakup Ates</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">development <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                    		<li>
+                    		<a href="https://y-ates.github.io/embedded">~/embedded</a>
+				    		</li>
+                		
+                    		<li>
+                    		<a href="https://y-ates.github.io/generaldev">~/generaldev</a>
+				    		</li>
+                		
+            		</ul>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">security <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                    		<li>
+                    		<a href="https://y-ates.github.io/ctf">~/ctf</a>
+				    		</li>
+                		
+                    		<li>
+                    		<a href="https://y-ates.github.io/secresearch">~/research</a>
+				    		</li>
+                		
+            		</ul>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://y-ates.github.io/secresearch/custom_wordlist_generation/">Creating custom wordlists</a></h1>
+            <span class="post-date">2020-05-10</span>
+            <div class="post-content">
+                <p>A brute-force attack on passwords/usernames using a custom generated wordlist
+can be way more efficient than to
+use some standard wordfiles like for example the famous &ldquo;rockyou.txt&rdquo;.
+In the following I will share a technique to generate your own custom
+wordlist.</p>
+<p>First of all, you should gather some information about your target and
+analyze it. You are looking for most used words, hobbies and anything that
+your target could use in his password. Write all these words down into a file
+whereas each word is separated by a new line. For example:</p>
+<pre><code class="language-nil" data-lang="nil">John
+Smith
+December
+Sunny
+Motorcycle
+Coke
+BMW
+</code></pre><p>Then you can add a year into each option. The following will print each word
+itself and the word concatenated with the year &ldquo;2020&rdquo; back to the file (just
+add/replace 2020 in the following line with whatever you want to add e.g. a
+question mark &ldquo;?&quot;):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">for</span> i in <span style="color:#66d9ef">$(</span>cat wordlist.txt<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span> echo $i; echo <span style="color:#66d9ef">$(</span>i<span style="color:#66d9ef">)</span>2020; <span style="color:#66d9ef">done</span> &gt; wordlist.txt
+</code></pre></div><p>Now we want to use <code>hashcat</code> to generate some more options based on a
+configured rule. We will use &ldquo;best64.rule&rdquo;, but you can use anything you want
+(go on and experiment). Generally, these rules (in Kali) are located at
+<code>/usr/share/hashcat/rules</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hashcat --force --stdout wordlist.txt -r /usr/share/hashcat/rules/best64.rule
+</code></pre></div><p>So this line mutates all lines, reverses, rotates, plays with character cases, appends
+numbers etc..
+Note, that you can use several rules in once just append another
+<code>-r/path/to/rule</code>.</p>
+<p>Of course, testing the same password several times doesn&rsquo;t make any sense, so
+go on and filter all duplicates:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cat wordlist | sort -u &gt; wordlist.txt
+</code></pre></div><p>In case we also know that the password is at least x characters long
+(e.g. 6), we don&rsquo;t need to test any password that is less than 6 characters
+long, so we can also remove those:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cat wordlist | awk <span style="color:#e6db74">&#39;length($0) &gt; 6&#39;</span> &gt; wordlist.txt
+</code></pre></div><p>And here you go! You just generated your custom wordlist which is probably
+(hopefully?) shorter than rockyou.txt :).</p>
+<p><strong>-EOF-</strong></p>
+
+            </div>
+            
+            <div class="post-comments">
+                
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2020 Yakup Ates -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>
